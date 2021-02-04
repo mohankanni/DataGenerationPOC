@@ -15,9 +15,9 @@ def finyear(date: date):
     return finyr
 
 
-def revdata(startdate, enddate):
+def revdata(startdate, enddate, freqtype):
 
-    dates = pd.date_range(start=startdate, end=enddate, freq='D')
+    dates = pd.date_range(start=startdate, end=enddate, freq=freqtype)
 
     acc_code = ['Bulk Water Charges', 'Profession Tax', 'Property Tax', 'Semi Bulk Charges',
                 'Semi Bulk Charges', 'Others', 'Shop Room Rents', 'Tap Connection', 'Trade License Fee', 'Water Charges']
@@ -37,6 +37,11 @@ def revdata(startdate, enddate):
     return finaldata
 
 
-@router.get("/")
-async def root(startdate: date, enddate: date):
-    return revdata(startdate, enddate)
+@router.get("/collection")
+async def collection(startdate: date, enddate: date):
+    return revdata(startdate, enddate, 'D')
+
+
+@router.get("/demand")
+async def collection(startdate: date, enddate: date):
+    return revdata(startdate, enddate, 'm')
