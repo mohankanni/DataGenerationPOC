@@ -10,6 +10,6 @@ pytz==2020.4
 scikit-learn
 scipy==1.5.4
 six==1.15.0
-starlette==0.13.6
+starlette==0.27.0
 threadpoolctl==2.1.0
 uvicorn==0.12.2
