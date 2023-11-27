@@ -1,7 +1,7 @@
 click==7.1.2
 fastapi==0.61.2
 h11==0.11.0
-joblib==0.17.0
+joblib==1.2.0
 numpy
 pandas
 pydantic==1.7.2
